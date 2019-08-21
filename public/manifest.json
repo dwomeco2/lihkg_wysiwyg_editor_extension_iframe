@@ -1,0 +1,24 @@
+{
+  "short_name": "LIHKG Editor(I)",
+  "name": "LIHKG WYSIWYG Editor Iframe",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "60",
+  "update_url": "https://dwomeco2.github.io/lihkg_wysiwyg_editor/updates_iframe.xml",
+  "icons": { 
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "permissions": [
+    "https://*.lihkg.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.lihkg.com/*"],
+      "css":["/static/css/main.css"],
+      "js": ["/static/js/main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
